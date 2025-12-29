@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { v5 } from "uuid";
 
 interface BLEDevice {
   id: string;
@@ -12,7 +11,6 @@ interface BLEDevice {
 
 export default function Scanner() {
   const [isScanning, setIsScanning] = useState(false);
-  const [devices, setDevices] = useState<Map<string, BLEDevice>>(new Map());
 
   const getNearbyDevices = async () => {
     try {
